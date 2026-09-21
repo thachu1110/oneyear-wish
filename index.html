@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy One Year Dear Nechuuu ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Segoe UI",sans-serif;
+    background:#09000b;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+    position:relative;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 50% 40%,#5b164c 0%,#21051f 35%,#09000b 75%);
+}
+
+.hero-content{
+    position:relative;
+    z-index:5;
+    animation:fadeUp 1.5s ease;
+}
+
+.small-title{
+    font-size:15px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    opacity:.75;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(38px,10vw,78px);
+    line-height:1.05;
+    background:linear-gradient(90deg,#fff,#ffb6da,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+    text-shadow:0 0 30px rgba(255,90,180,.3);
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:18px;
+    opacity:.85;
+}
+
+.open-btn{
+    margin-top:35px;
+    padding:15px 28px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(135deg,#ff4fa3,#b92b72);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 0 25px rgba(255,65,155,.4);
+    transition:.3s;
+}
+
+.open-btn:hover{
+    transform:scale(1.06);
+}
+
+/* ---------- FLOATING HEARTS ---------- */
+
+.heart{
+    position:absolute;
+    bottom:-50px;
+    font-size:20px;
+    opacity:.6;
+    animation:floatHeart linear infinite;
+    pointer-events:none;
+}
+
+@keyframes floatHeart{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.7;
+    }
+
+    100%{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* ---------- SECTIONS ---------- */
+
+section{
+    padding:90px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:clamp(28px,7vw,45px);
+    margin-bottom:18px;
+}
+
+.section-subtitle{
+    text-align:center;
+    opacity:.7;
+    max-width:650px;
+    margin:0 auto 45px;
+}
+
+/* ---------- COUNTER ---------- */
+
+.counter-section{
+    text-align:center;
+    background:linear-gradient(180deg,#09000b,#160314,#09000b);
+}
+
+.counter{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    max-width:700px;
+    margin:auto;
+}
+
+.counter-box{
+    padding:25px 10px;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    background:rgba(255,255,255,.04);
+    backdrop-filter:blur(10px);
+}
+
+.counter-box span{
+    display:block;
+    font-size:32px;
+    font-weight:bold;
+    color:#ff8bc5;
+}
+
+.counter-box small{
+    opacity:.65;
+}
+
+/* ---------- TIMELINE ---------- */
+
+.timeline{
+    position:relative;
+    max-width:750px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:20px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:linear-gradient(#ff62ad,transparent);
+}
+
+.timeline-item{
+    margin-bottom:35px;
+    padding-left:60px;
+    position:relative;
+}
+
+.timeline-item::before{
+    content:"❤️";
+    position:absolute;
+    left:5px;
+    top:0;
+    font-size:25px;
+}
+
+.timeline-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:25px;
+}
+
+.timeline-card h3{
+    color:#ff9dca;
+    margin-bottom:8px;
+}
+
+/* ---------- LOVE CARDS ---------- */
+
+.love-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:18px;
+}
+
+.love-card{
+    padding:30px 20px;
+    text-align:center;
+    border-radius:25px;
+    background:linear-gradient(145deg,#251027,#120611);
+    border:1px solid rgba(255,255,255,.08);
+    transition:.35s;
+}
+
+.love-card:hover{
+    transform:translateY(-8px) scale(1.02);
+    box-shadow:0 15px 40px rgba(255,0,130,.15);
+}
+
+.love-card .emoji{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.love-card h3{
+    margin-bottom:10px;
+    color:#ffafd3;
+}
+
+.love-card p{
+    opacity:.72;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* ---------- LOVE LETTER ---------- */
+
+.letter{
+    max-width:800px;
+    margin:auto;
+    padding:35px 25px;
+    border-radius:25px;
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.02)
+    );
+    border:1px solid rgba(255,255,255,.1);
+    box-shadow:0 20px 60px rgba(0,0,0,.3);
+}
+
+.letter p{
+    font-size:17px;
+    line-height:2;
+    opacity:.88;
+}
+
+.signature{
+    margin-top:25px;
+    text-align:right;
+    color:#ff9dca;
+    font-size:20px;
+}
+
+/* ---------- FINAL ---------- */
+
+.final{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:
+        radial-gradient(circle,#4a123c,#180514 45%,#09000b 80%);
+}
+
+.final-content{
+    max-width:750px;
+}
+
+.final h2{
+    font-size:clamp(38px,10vw,70px);
+    background:linear-gradient(90deg,#fff,#ff83be,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.final-message{
+    margin-top:25px;
+    line-height:1.9;
+    font-size:18px;
+    opacity:.85;
+}
+
+.forever{
+    margin-top:30px;
+    font-size:24px;
+    color:#ff9ac9;
+}
+
+/* ---------- ANIMATION ---------- */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.reveal{
+    opacity:0;
+    transform:translateY(35px);
+    transition:1s;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:600px){
+
+    section{
+        padding:70px 17px;
+    }
+
+    .hero{
+        padding:20px;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .counter{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .counter-box span{
+        font-size:26px;
+    }
+
+    .letter{
+        padding:25px 20px;
+    }
+
+    .letter p{
+        font-size:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HERO ================= -->
+
+<div class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            22 September 2025 → 22 September 2026
+        </div>
+
+        <h1>
+            Happy One Year<br>
+            Dear Nechuuu ❤️
+        </h1>
+
+        <p>
+            365 days... countless memories... one beautiful us. 🥹❤️
+        </p>
+
+        <button class="open-btn" onclick="openLove()">
+            Open My Heart 💌
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= COUNTER ================= -->
+
+<section class="counter-section reveal">
+
+    <h2 class="section-title">
+        Our Time Together ⏳
+    </h2>
+
+    <p class="section-subtitle">
+        Oru year mathram alla... nammal share cheytha oro secondum
+        enikku valare precious memory aanu. ❤️
+    </p>
+
+    <div class="counter">
+
+        <div class="counter-box">
+            <span id="days">365</span>
+            <small>Days</small>
+        </div>
+
+        <div class="counter-box">
+            <span id="hours">8760</span>
+            <small>Hours</small>
+        </div>
+
+        <div class="counter-box">
+            <span id="minutes">525600</span>
+            <small>Minutes</small>
+        </div>
+
+        <div class="counter-box">
+            <span id="seconds">0</span>
+            <small>Seconds</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= JOURNEY ================= -->
+
+<section class="reveal">
+
+    <h2 class="section-title">
+        Our Little Journey 💕
+    </h2>
+
+    <p class="section-subtitle">
+        Chila moments small aayirikkum...
+        but ente heartil athokke valiya memories aanu.
+    </p>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <h3>🌸 The Beginning</h3>
+
+                <p>
+                    22 September 2025in aahn— nammade story officially
+                    start cheythathenkilm  enik ath 4yrs munne thodngiythaa 
+                    Appo ith ithra special aakumennu njan arinjirunnilla. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <h3>💬 Endless Talks</h3>
+
+                <p>
+                    Oru topic illenkilum samsarichukond irikkan
+                    pattunna aa conversations... Onnum illenkilm Nalla baad adich irkuanenkilm ninnod mindumba njaan okay aahn, 
+                    athokke enikku orupadu ishtam aanu. 🥹
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <h3>🥰 Little Moments</h3>
+
+                <p>
+                    Cheriya fights, random laughs, caring,
+                    pinne veendum okay aavunna moments...
+                    athaanu nammade story beautiful aakkunnath. Ethreke adi indenkilm adhikm vaykiknd solve aaknm, Enik ellaam paryaan niyalleda olllu🥹😙
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-card">
+
+                <h3>❤️ One Year</h3>
+
+                <p>
+                    And here we are...
+                    365 days of us.
+                    One beautiful year completed.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY I LOVE YOU ================= -->
+
+<section class="reveal">
+
+    <h2 class="section-title">
+        Why I Love You ❤️
+    </h2>
+
+    <p class="section-subtitle">
+        Actually... ithinu oru single reason illa.
+        There are too many. 🥹
+    </p>
+
+    <div class="love-grid">
+
+        <div class="love-card">
+
+            <div class="emoji">😊</div>
+
+            <h3>Your Smile</h3>
+
+            <p>
+                Enth prshnm indenkilm ninnod open aabmba  ente mood thanne
+                automatically change aakum.
+            </p>
+
+        </div>
+
+
+        <div class="love-card">
+
+            <div class="emoji">🫶</div>
+
+            <h3>Your Care</h3>
+
+            <p>
+                Cheriya karyangal polum notice cheyth
+                care cheyyunna reethi. Enn vch express aaknilenkilm nee ellaam mnslay chynindlo
+            </p>
+
+        </div>
+
+
+        <div class="love-card">
+
+            <div class="emoji">🥹</div>
+
+            <h3>Your Presence</h3>
+
+            <p>
+                Nee koode undennu ariyunnath thanne
+                oru different happiness aanu. Enk oro divsm kudm thorm ninne knaan vndi or madpm feel avunila, eppa kndalm kndond irkn thonm😌😘
+            </p>
+
+        </div>
+
+
+        <div class="love-card">
+
+            <div class="emoji">😂</div>
+
+            <h3>Your Vibes</h3>
+
+            <p>
+                Random conversations, Ni aayt adi pidkal, 
+                everything feels special. Enn vchh enik eppzhm adi pidknth nllth allta😅😂
+            </p>
+
+        </div>
+
+
+        <div class="love-card">
+
+            <div class="emoji">❤️</div>
+
+            <h3>Just You</h3>
+
+            <p>
+                Finally, I don't need a reason.
+                I love you because you're you.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LOVE LETTER ================= -->
+
+<section class="reveal">
+
+    <h2 class="section-title">
+        A Letter For You 💌
+    </h2>
+
+    <div class="letter">
+
+        <p>
+            Dear Nechuuu ❤️
+        </p>
+
+        <br>
+
+        <p>
+            22 September 2025 muthal innu vare...
+            time engane poyennu enikku polum manassil aavunnilla.
+            But one thing I know for sure —
+            ee one year ente life-il njan orikkalum marakkatha
+            oru beautiful chapter aanu nii...
+        </p>
+
+        <br>
+
+        <p>
+            Nammal perfect aayirunnilla.
+            Fights undayi, misunderstandings undayi,
+            chila days difficult aayirunnu.
+            Pakshe athinte ellam idayilum nammal
+            together ninnu ennathaanu enikku ettavum important.
+        </p>
+
+        <br>
+
+        <p>
+            Nee ente life-il vannathinu shesham
+            ordinary moments polum special aayi thonni.
+            Oru message, oru call, oru smile,
+            oru simple "evideyaa?" polum
+            sometimes ente whole day better aakkum.
+        </p>
+
+        <br>
+
+        <p>
+            Thank you for every laugh,
+            every conversation,
+            every little care,
+            every memory,
+            and most importantly,
+            thank you for being you.
+        </p>
+
+        <br>
+
+        <p>
+            This is just our first year.
+            Ini iniyum kure memories undakkanam,
+            kure places explore cheyyanam,
+            kure laugh cheyyanam,
+            kure fights cheythittu pinne okay aakanam. 😂❤️
+        </p>
+
+        <br>
+
+        <p>
+            Whatever happens,
+            I hope we always remember how this beautiful
+            story started.
+        </p>
+
+        <div class="signature">
+            With all my love,<br>
+            Thachuuu ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL SURPRISE ================= -->
+
+<section class="final">
+
+    <div class="final-content">
+
+        <div class="small-title">
+            One Last Thing...
+        </div>
+
+        <h2>
+            Happy 1st Anniversary<br>
+            Nechuuu ❤️
+        </h2>
+
+        <p class="final-message">
+
+            One year complete...
+            but our story is nowhere near complete. 🥹
+
+            <br><br>
+
+            I don't know what the future has planned for us,
+            but I know one thing —
+            I want many more memories, laughs, adventures,
+            and beautiful moments with you. Nta chakkara muthaan, shuttumaniiii Ummaaaa💋💋🫂 Loveyyuu myy babyyy🥹🤍 
+
+            <br><br>
+
+            From 22/09/2025...
+            to every tomorrow that comes. ❤️
+
+        </p>
+
+        <div class="forever">
+
+            Thachuuu ❤️ Nechuuu
+
+            <br>
+
+            <small>
+                One year. One story. One us. ♾️
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* ================= FLOATING HEARTS ================= */
+
+function createHeart(){
+
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+
+    const hearts = [
+        "❤️",
+        "💕",
+        "💗",
+        "💖",
+        "💘",
+        "💓"
+    ];
+
+    heart.innerHTML =
+        hearts[Math.floor(Math.random()*hearts.length)];
+
+    heart.style.left =
+        Math.random()*100 + "vw";
+
+    heart.style.animationDuration =
+        (5 + Math.random()*6) + "s";
+
+    heart.style.fontSize =
+        (12 + Math.random()*22) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },11000);
+}
+
+setInterval(createHeart,450);
+
+
+/* ================= COUNTER ================= */
+
+const startDate =
+    new Date("2025-09-22T00:00:00");
+
+function updateCounter(){
+
+    const now = new Date();
+
+    const difference =
+        now - startDate;
+
+    const totalSeconds =
+        Math.floor(difference / 1000);
+
+    const days =
+        Math.floor(totalSeconds / 86400);
+
+    const hours =
+        Math.floor(totalSeconds / 3600);
+
+    const minutes =
+        Math.floor(totalSeconds / 60);
+
+    const seconds =
+        totalSeconds % 60;
+
+    document.getElementById("days").textContent =
+        days;
+
+    document.getElementById("hours").textContent =
+        hours;
+
+    document.getElementById("minutes").textContent =
+        minutes;
+
+    document.getElementById("seconds").textContent =
+        seconds;
+}
+
+updateCounter();
+
+setInterval(updateCounter,1000);
+
+
+/* ================= SCROLL REVEAL ================= */
+
+const observer =
+    new IntersectionObserver(
+        entries=>{
+
+            entries.forEach(entry=>{
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        },
+        {
+            threshold:.15
+        }
+    );
+
+document
+    .querySelectorAll(".reveal")
+    .forEach(el=>observer.observe(el));
+
+
+/* ================= OPEN LOVE ================= */
+
+function openLove(){
+
+    document
+        .getElementById("home")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+    setTimeout(()=>{
+
+        document
+            .querySelector(".counter-section")
+            .scrollIntoView({
+                behavior:"smooth"
+            });
+
+        confetti();
+
+    },800);
+
+}
+
+
+/* ================= CONFETTI ================= */
+
+function confetti(){
+
+    const symbols = [
+        "❤️",
+        "💕",
+        "💖",
+        "✨",
+        "💗",
+        "🎉",
+        "💘"
+    ];
+
+    for(let i=0;i<80;i++){
+
+        const item =
+            document.createElement("div");
+
+        item.innerHTML =
+            symbols[
+                Math.floor(
+                    Math.random()*symbols.length
+                )
+            ];
+
+        item.style.position="fixed";
+
+        item.style.left =
+            Math.random()*100+"vw";
+
+        item.style.top="-30px";
+
+        item.style.fontSize =
+            (15+Math.random()*20)+"px";
+
+        item.style.zIndex="999";
+
+        item.style.transition =
+            "transform 3s linear, opacity 3s";
+
+        document.body.appendChild(item);
+
+        setTimeout(()=>{
+
+            item.style.transform =
+                `translateY(${window.innerHeight+100}px)
+                 rotate(${Math.random()*720}deg)`;
+
+            item.style.opacity="0";
+
+        },50);
+
+        setTimeout(()=>{
+            item.remove();
+        },3200);
+
+    }
+}
+
+
+/* ================= ANNIVERSARY EFFECT ================= */
+
+window.addEventListener("load",()=>{
+
+    setTimeout(()=>{
+
+        confetti();
+
+    },1200);
+
+});
+
+</script>
+
+</body>
+</html>
